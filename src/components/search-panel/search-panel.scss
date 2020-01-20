@@ -1,0 +1,43 @@
+@import "../../scss/base/variables";
+
+.search-panel {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-label,
+  &-input {
+    padding: 11px 45px;
+    color: $gray-4;
+    font-size: 14px;
+    line-height: (17 / 14);
+    letter-spacing: .05em;
+  }
+
+  &-label {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    transition: .3s ease-out all;
+
+    &.active {
+      opacity: 0;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid $gray-6;
+    border-radius: 30px;
+  }
+}
