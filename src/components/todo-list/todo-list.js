@@ -5,7 +5,7 @@ import ListItem from "../list-item";
 export default class TodoList extends Component {
   render() {
     return (
-      <ul>
+      <ul className='todo-list'>
         <ListItem />
       </ul>
     );

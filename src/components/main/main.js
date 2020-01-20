@@ -7,8 +7,14 @@ import FilterButton from "../filter-buttons";
 function Main() {
   return(
     <div className="main">
-      <NewItem/>
-      <FilterButton/>
+      <div className="main-header">
+        <div className="main-header-left">
+          <NewItem/>
+        </div>
+        <div className="main-header-right">
+          <FilterButton/>
+        </div>
+      </div>
       <TodoList/>
     </div>
   )

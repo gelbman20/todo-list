@@ -4,8 +4,8 @@ import './filter-buttons.scss';
 function FilterButton() {
   return (
     <div className="btn-group btn-filter">
-      <button>Important</button>
-      <button>Done</button>
+      <button className='btn btn-green'>Important</button>
+      <button className='btn btn-red'>Done</button>
     </div>
   );
 }

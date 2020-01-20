@@ -3,7 +3,10 @@ import './new-item.scss';
 
 function NewItem() {
   return (
-    <input type="text"/>
+    <div className="new-item">
+      <button className='btn new-item-btn'>Add Task</button>
+      <input className='new-item-input' type="text"/>
+    </div>
   );
 }
 

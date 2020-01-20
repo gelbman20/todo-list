@@ -1,0 +1,53 @@
+// Buttons
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 7px 20px;
+  box-shadow: none;
+  border: 0;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: .3s ease-out all;
+  
+  &, &:focus, &:active {
+    color: $white;
+    background-color: $blue;
+  }
+  
+  &:hover {
+    color: $white;
+    background-color: darken($blue, 10);
+  }
+}
+
+.btn-group {
+  margin-left: -5px;
+  margin-bottom: -5px;
+  > * {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.btn-green {
+  &, &:focus, &:active {
+    background-color: $green;
+  }
+  
+  &:hover {
+    background-color: darken($green, 10);
+  }
+}
+
+.btn-red {
+  &, &:focus, &:active {
+    background-color: $red;
+  }
+
+  &:hover {
+    background-color: darken($red, 10);
+  }
+}
