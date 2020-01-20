@@ -1,0 +1,12 @@
+import React from "react";
+
+function SearchIcon({color = '#bdbdbd', classname = ''}) {
+  return (
+    <svg className={classname} width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6.66666" cy="6.66666" r="6.16666" stroke={color}/>
+      <path d="M9 12.6667L13.6667 20L14.6667 19.3333L10 12L9 12.6667Z" fill={color}/>
+    </svg>
+  );
+}
+
+export default SearchIcon;
