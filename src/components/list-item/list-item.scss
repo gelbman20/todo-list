@@ -9,16 +9,12 @@
   color: $body;
   border-bottom: 1px solid $gray-5;
 
-  &:last-child {
-    border-bottom: 0;
-  }
+  &:last-child { border-bottom: 0; }
 
   &-text {
     margin-right: 10px;
 
-    &.active {
-      color: $gray-4;
-    }
+    &.active { color: $gray-4; }
 
     @media (min-width: 570px) {
       margin-right: 15px;
@@ -29,9 +25,7 @@
     cursor: pointer;
 
     path,
-    circle {
-      transition: .3s ease-out all;
-    }
+    circle { transition: .3s ease-out all; }
 
     &-check {
       margin-right: 10px;
@@ -52,21 +46,20 @@
           stroke: $red;
           fill: $red;
         }
-        path {
-          stroke: $white;
-        }
+
+        path { stroke: $white; }
       }
     }
 
     &-important {
       margin-left: auto;
+
       circle {
         stroke: $gray-4;
         fill: transparent;
       }
-      path {
-        fill: $gray-4;
-      }
+
+      path { fill: $gray-4; }
 
       &:hover,
       &.active {
@@ -74,9 +67,8 @@
           stroke: $green;
           fill: $green;
         }
-        path {
-          fill: $white;
-        }
+
+        path { fill: $white; }
       }
     }
   }
