@@ -1,7 +1,23 @@
 .new-item {
+  position: relative;
+
   &-input {
     position: absolute;
-    opacity: 0;
+    left: -2px;
+    top: -2px;
+    width: 83vw;
+    max-width: 430px;
+    height: 40px;
+    padding: 3px 15px;
+    border-radius: 30px;
     pointer-events: none;
+    border: 1px solid #f2f2f2;
+    opacity: 0;
+    transition: .3s ease-out all;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 }

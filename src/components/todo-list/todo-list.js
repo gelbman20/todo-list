@@ -3,12 +3,7 @@ import './todo-list.scss';
 import ListItem from "../list-item";
 
 function itemIndex(arr, id) {
-  const currentItem = arr.filter((item) => {
-    if (item.id === id) {
-      return item;
-    }
-  });
-
+  const currentItem = arr.filter((item) => item.id === id);
   return arr.indexOf(...currentItem);
 }
 
@@ -23,13 +18,14 @@ function toggleProperty(arr, id, property) {
 }
 
 export default class TodoList extends Component {
-
   data = [
     {id: 0, label: 'Drink Some coffee', done: false, important: false},
     {id: 1, label: 'Eat Burger', done: false, important: true},
     {id: 2, label: 'Order Pizza', done: false, important: false},
     {id: 3, label: 'Create Good Todo App', done: true, important: false},
   ];
+
+  counter = this.data.length;
 
   state = {
     data: this.data
@@ -53,8 +49,29 @@ export default class TodoList extends Component {
     });
   };
 
-  render() {
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if(prevProps.newItem !== this.props.newItem) {
+      if(this.props.newItem) {
+        const arr = this.state.data;
+        let id = this.counter++;
+        const label = this.props.newItem;
+        arr.push({
+          id,
+          label,
+          done: false,
+          important: false
+        });
 
+        this.setState(() => {
+          return {
+            data: arr
+          }
+        });
+      }
+    }
+  }
+
+  render() {
     const {data} = this.state;
 
     return (
