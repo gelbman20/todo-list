@@ -27,9 +27,9 @@ function ListItem({data, toggleDone, toggleImportant}) {
 
     return (
       <li key={id} className='todo-list-item'>
-        <CheckIcon clickCheckIcon={ iconDoneClick } className={doneClassName}/>
+        <CheckIcon clickCheckIcon={iconDoneClick} className={doneClassName}/>
         <span className={textClassName}>{label}</span>
-        <ImportantIcon clickImportantIcon={ iconImportantClick } className={importantClassName}/>
+        <ImportantIcon clickImportantIcon={iconImportantClick} className={importantClassName}/>
       </li>
     );
   });

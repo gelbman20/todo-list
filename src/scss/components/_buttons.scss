@@ -16,19 +16,19 @@
     background-color: $blue;
   }
   
-  &:hover {
+  &:hover, &.active {
     color: $white;
     background-color: darken($blue, 10);
   }
 }
 
 .btn-group {
-  margin-left: -5px;
-  margin-bottom: -5px;
+  margin-left: -3px;
+  margin-bottom: -3px;
   > * {
     display: inline-block;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin-left: 3px;
+    margin-bottom: 3px;
   }
 }
 
@@ -37,7 +37,7 @@
     background-color: $green;
   }
   
-  &:hover {
+  &:hover, &.active {
     background-color: darken($green, 10);
   }
 }
@@ -47,7 +47,7 @@
     background-color: $red;
   }
 
-  &:hover {
+  &:hover, &.active {
     background-color: darken($red, 10);
   }
 }

@@ -50,8 +50,8 @@ export default class TodoList extends Component {
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if(prevProps.newItem !== this.props.newItem) {
-      if(this.props.newItem) {
+    if (prevProps.newItem !== this.props.newItem) {
+      if (this.props.newItem) {
         const arr = this.state.data;
         let id = this.counter++;
         const label = this.props.newItem;
@@ -72,11 +72,26 @@ export default class TodoList extends Component {
   }
 
   render() {
-    const {data} = this.state;
+    let {data} = this.state;
+    let {filterType} = this.props;
+
+    if (filterType) {
+      switch (filterType) {
+        case 'important':
+          data = data.filter((item) => item.important);
+          break;
+        case 'done':
+          data = data.filter((item) => item.done);
+          break;
+        default:
+          data = this.state.data;
+          break;
+      }
+    }
 
     return (
       <ul className='todo-list'>
-        <ListItem data={data} toggleDone={ this.toggleDone } toggleImportant={this.toggleImportant}/>
+        <ListItem data={data} toggleDone={this.toggleDone} toggleImportant={this.toggleImportant}/>
       </ul>
     );
   }
