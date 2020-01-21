@@ -24,6 +24,7 @@
 
   &-icon {
     cursor: pointer;
+    flex-shrink: 0;
 
     path,
     circle { transition: .3s ease-out all; }

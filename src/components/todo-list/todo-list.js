@@ -73,7 +73,7 @@ export default class TodoList extends Component {
 
   render() {
     let {data} = this.state;
-    let {filterType} = this.props;
+    let {filterType, searchText} = this.props;
 
     if (filterType) {
       switch (filterType) {
@@ -87,6 +87,15 @@ export default class TodoList extends Component {
           data = this.state.data;
           break;
       }
+    }
+
+    if(searchText.length > 0) {
+      let arr = this.state.data;
+      arr = arr.filter(({label}) => {
+        return label.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
+      });
+
+      data = arr;
     }
 
     return (

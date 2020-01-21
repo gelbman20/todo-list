@@ -25,6 +25,7 @@ export default class Main extends Component {
   render() {
     const newItem = this.state.newItem.length ? this.state.newItem : null;
     const filterType = this.state.filterType;
+    const searchText = this.props.searchText;
 
     return (
       <div className="main">
@@ -36,7 +37,7 @@ export default class Main extends Component {
             <FilterButton callFilterButtons={this.callFilterButtons}/>
           </div>
         </div>
-        <TodoList filterType={filterType} newItem={newItem}/>
+        <TodoList searchText={searchText} filterType={filterType} newItem={newItem}/>
       </div>
     )
   }
